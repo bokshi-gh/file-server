@@ -54,7 +54,7 @@ func ClientHandler(rootDir string, verbose bool) http.HandlerFunc {
 					     <style>
 						@import url('https://fonts.googleapis.com/css2?family=Momo+Signature&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap');  		
 					     	* { margin: 0px; padding: 0px; box-sizing: border-box; }
-						body { padding: 1rem; display: flex; flex-direction: column; gap: 1rem; font-size: 18px; font-family: "Poppns", sans-serif; }
+						body { padding: 1rem; display: flex; flex-direction: column; gap: 1rem; font-size: 18px; font-family: "Poppins", sans-serif; }
 						div { display: flex; flex-direction: column; gap: 0.5rem; }
 						div p { display: flex; gap: 0.5rem; align-items: center; }
 					     </style>

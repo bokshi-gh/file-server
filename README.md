@@ -9,6 +9,8 @@ A simple, lightweight HTTP file server written in Go. Supports directory listing
 
 ## Installation
 
+### Install from source (build it yourself)
+
 Clone the repository:
 
 ```bash
@@ -20,6 +22,35 @@ Build the server:
 
 ```bash
 go build -o goserve ./cmd/goserve
+```
+
+### Install using build scripts
+
+#### For Unix-like systems (Linux, macOS)
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/youruser/file-server/main/scripts/build.sh | bash
+```
+
+#### For Windows
+
+```powershell
+irm https://raw.githubusercontent.com/bokshi-gh/file-server/main/scripts/build.ps1 | iex
+```
+
+### Install a specific version
+
+Replace vX.Y.Z with the version you want
+
+#### Unix-like
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/bokshi-gh/file-server/vX.Y.Z/scripts/build.sh | bash
+```
+
+#### Windows
+```powershell
+irm https://raw.githubusercontent.com/bokshi-gh/file-server/vX.Y.Z/scripts/build.ps1 | iex
 ```
 
 ## Usage

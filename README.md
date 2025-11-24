@@ -30,7 +30,7 @@ go build -o goserve ./cmd/goserve
 For Unix-like systems (Linux, macOS):
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/youruser/file-server/main/scripts/build.sh | bash
+curl -fsSL https://raw.githubusercontent.com/bokshi-gh/file-server/main/scripts/build.sh | bash
 ```
 
 For Windows:

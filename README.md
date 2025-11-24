@@ -1,4 +1,4 @@
-# Goserve
+# GoServe
 
 A simple, lightweight HTTP file server written in Go. Supports directory listing and serving files with proper MIME types.
 

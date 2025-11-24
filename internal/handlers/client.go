@@ -52,11 +52,11 @@ func ClientHandler(rootDir string, verbose bool) http.HandlerFunc {
                         fmt.Fprintf(w, "<html><head><meta charset=\"utf-8\"><title>Index of %s</title></head><body><h1>Index of %s</h1><hr><ul>", requestedPath, requestedPath)
                         for _, e := range entries {
                                 name := e.Name()
-                                link := name
                                 if e.IsDir() {
-                                        link += "/"
+					fmt.Fprintf(w, `<li><a href="%s/%s/">%s</a></li>`, requestedPath, name, name)
+					continue
                                 }
-                                fmt.Fprintf(w, `<li><a href="%s">%s</a></li>`, link, name)
+                                fmt.Fprintf(w, `<li><a href="%s">%s</a></li>`, name, name)
                         }
                         fmt.Fprint(w, "</ul></body></html>")
 

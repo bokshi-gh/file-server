@@ -3,13 +3,14 @@
 A simple, lightweight HTTP file server written in Go. Supports directory listing and serving files with proper MIME types.
 
 ## Features
-- Serves static files and lists directory over HTTP.
-- Automatic index.html fallback for directories.
-- Prevents directory traversal.
+- Directory listing
+- Serves static files over HTTP
+- Automatic index.html fallback for directories
+- Prevents directory traversal
 
 ## Installation
 
-### Install from source (build it yourself)
+### Install from source (build on your machine)
 
 Clone the repository:
 
@@ -26,13 +27,13 @@ go build -o goserve ./cmd/goserve
 
 ### Install using build scripts
 
-#### For Unix-like systems (Linux, macOS)
+For Unix-like systems (Linux, macOS):
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/youruser/file-server/main/scripts/build.sh | bash
 ```
 
-#### For Windows
+For Windows:
 
 ```powershell
 irm https://raw.githubusercontent.com/bokshi-gh/file-server/main/scripts/build.ps1 | iex
@@ -42,13 +43,13 @@ irm https://raw.githubusercontent.com/bokshi-gh/file-server/main/scripts/build.p
 
 Replace vX.Y.Z with the version you want
 
-#### Unix-like
+Unix-like:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/bokshi-gh/file-server/vX.Y.Z/scripts/build.sh | bash
 ```
 
-#### Windows
+Windows:
 ```powershell
 irm https://raw.githubusercontent.com/bokshi-gh/file-server/vX.Y.Z/scripts/build.ps1 | iex
 ```

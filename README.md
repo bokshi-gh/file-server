@@ -3,7 +3,7 @@
 A simple, lightweight HTTP file server written in Go. Supports directory listing and serving files with proper MIME types.
 
 ## Features
-- Directory listing
+- Lists directories
 - Serves static files over HTTP
 - Automatic index.html fallback for directories
 - Prevents directory traversal
@@ -59,5 +59,5 @@ irm https://raw.githubusercontent.com/bokshi-gh/file-server/vX.Y.Z/scripts/build
 Run the server:
 
 ```bash
-./goserve --root ./public --host 0.0.0.0 --port 8080 --v
+goserve --root ./public --host 0.0.0.0 --port 8080 --v
 ```

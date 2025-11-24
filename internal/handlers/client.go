@@ -11,8 +11,6 @@ import (
 	"time"
 )
 
-
-
 func ClientHandler(rootDir string, verbose bool) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		requestedPath := r.URL.Path
@@ -32,6 +30,12 @@ func ClientHandler(rootDir string, verbose bool) http.HandlerFunc {
 		info, err := os.Stat(fullPath)
 		if err != nil {
 			http.Error(w, "Not found", http.StatusNotFound)
+			return
+		}
+
+		// Redirect to path with trailing slash for directories
+		if info.IsDir() && !strings.HasSuffix(r.URL.Path, "/") {
+			http.Redirect(w, r, r.URL.Path+"/", http.StatusMovedPermanently)
 			return
 		}
 

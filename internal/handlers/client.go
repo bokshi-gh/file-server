@@ -53,7 +53,9 @@ func ClientHandler(rootDir string, verbose bool) http.HandlerFunc {
 			style := fmt.Sprintf(`
 					     <style>
 					     	* { margin: 0px; padding: 0px; box-sizing: border-box; }
-						body { padding: 1rem; display: flex; flex-direction: column; gap: 1rem;}
+						body { padding: 1rem; display: flex; flex-direction: column; gap: 1rem; font-size: 18px }
+						div { display: flex; flex-direction: column; gap: 0.5rem; }
+						div p { display: flex; gap: 0.5rem; align-items: center; }
 					     </style>
 			         `)
 

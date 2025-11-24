@@ -18,4 +18,3 @@ cd ~
 rm -rf "$TMP_DIR"
 
 echo "Build complete! You can now run '$EXEC_NAME' from anywhere."
-

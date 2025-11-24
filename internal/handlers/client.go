@@ -56,7 +56,7 @@ func ClientHandler(rootDir string, verbose bool) http.HandlerFunc {
                                 if e.IsDir() {
                                         link += "/"
                                 }
-                                fmt.Fprintf(w, `<li><a href="%s">%s</a></li>`, requestedPath, name)
+                                fmt.Fprintf(w, `<li><a href="%s">%s</a></li>`, link, name)
                         }
                         fmt.Fprint(w, "</ul></body></html>")
 

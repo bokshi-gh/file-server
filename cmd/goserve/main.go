@@ -23,9 +23,7 @@ func main() {
 	http.HandleFunc("/", handlers.ClientHandler(*rootDir, *verbose))
 	addr := *host + ":" + *port
 	log.Printf("Goserve is listening on: http://%s", addr)
-	if *verbose {
-		log.Printf("Serving root: %s", *rootDir)
-	}
+	log.Printf("Serving root: %s", *rootDir)
 	log.Fatal(http.ListenAndServe(addr, nil))
 }
 

@@ -57,9 +57,9 @@ func ClientHandler(rootDir string, verbose bool) http.HandlerFunc {
 			style := fmt.Sprintf(`
 					     <style>
 					     	* { margin: 0px; padding: 0px; box-sizing: border-box; }
-						body { padding: 1rem; display: flex; flex-direction: column; gap: 1rem; font-size: 18px; }
-						div { display: flex; flex-direction: column; gap: 0.5rem; }
-						div p { display: flex; gap: 0.5rem; align-items: center; }
+							body { padding: 1rem; display: flex; flex-direction: column; gap: 1rem; font-size: 18px; }
+							div { display: flex; flex-direction: column; gap: 0.5rem; }
+							div p { display: flex; gap: 0.5rem; align-items: center; }
 					     </style>
 			         `)
 
@@ -96,8 +96,7 @@ func ClientHandler(rootDir string, verbose bool) http.HandlerFunc {
 
 func serveFile(fullPath string, verbose bool, w http.ResponseWriter) {
 	start := time.Now()
-
-	// Since switch expression has default so mime => application/octet-stream will always be overwritten
+	
 	mime := "application/octet-stream"
 	ext := strings.ToLower(filepath.Ext(fullPath))
 	switch ext {
